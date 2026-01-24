@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  test:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: /tests/test-installation.sh
+    volumes:
+      - ./tests:/tests:ro
